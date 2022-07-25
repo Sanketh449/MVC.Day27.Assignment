@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MVC.Day27.Assignment.Models.Product>
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-9">
+            <h2> Nursery Details</h2>
+
+            <table class="table  table-hover">
+                <tr>
+                    <th>Id</th>
+                    <th>SKU_NO</th>
+                    <th>ProductName</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>IsAvailable</th>
+                    <th>CreatedDate</th>
+                </tr>
+                @foreach (var prd in Model)
+                {
+                    <tr>
+                        <td>@prd.Id</td>
+                        <td>@prd.SKU_NO</td>
+                        <td>@prd.ProductName</td>
+                        <td>@prd.Price</td>
+                        <td>@prd.Description</td>
+                        <td>@prd.IsAvailable</td>
+                        <td>@prd.CreatedDate</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
+
